@@ -1,34 +1,34 @@
 import Db from './db-pg.js';
 import { buildSelectAllSql, buildSelectByIdSql, buildInsertSql, buildUpdateSql, buildDeleteByIdSql } from './../helpers/sql-crud-helper.js';
 
-export default class CursosRepository {
+export default class MateriasRepository {
     constructor() {
-        console.log('Estoy en: CursosRepository.constructor()');
+        console.log('Estoy en: MateriasRepository.constructor()');
         this.db = new Db();
     }
 
     getAllAsync = async () => {
-        console.log(`CursosRepository.getAllAsync()`);
-        const sql = buildSelectAllSql('cursos');
+        console.log(`MateriasRepository.getAllAsync()`);
+        const sql = buildSelectAllSql('materias');
         return await this.db.queryAll(sql);
     }
 
     getByIdAsync = async (id) => {
-        console.log(`CursosRepository.getByIdAsync(${id})`);
-        const sql = buildSelectByIdSql('cursos');
+        console.log(`MateriasRepository.getByIdAsync(${id})`);
+        const sql = buildSelectByIdSql('materias');
         return await this.db.queryOne(sql, [id]);
     }
 
     createAsync = async (entity) => {
-        console.log(`CursosRepository.createAsync(${JSON.stringify(entity)})`);
-        const sql = buildInsertSql('cursos', ['nombre']);
+        console.log(`MateriasRepository.createAsync(${JSON.stringify(entity)})`);
+        const sql = buildInsertSql('materias', ['nombre']);
         const values = [entity?.nombre ?? ''];
         return await this.db.queryReturnId(sql, values);
     }
 
     updateAsync = async (entity) => {
-        console.log(`CursosRepository.updateAsync(${JSON.stringify(entity)})`);
-        const sql = buildUpdateSql('cursos', ['nombre']);
+        console.log(`MateriasRepository.updateAsync(${JSON.stringify(entity)})`);
+        const sql = buildUpdateSql('materias', ['nombre']);
         const values =  [   entity.id,
                             entity?.nombre ?? ''
                         ];
@@ -36,8 +36,8 @@ export default class CursosRepository {
     }
 
     deleteByIdAsync = async (id) => {
-        console.log(`CursosRepository.deleteByIdAsync(${id})`);
-        const sql = buildDeleteByIdSql('cursos');
+        console.log(`MateriasRepository.deleteByIdAsync(${id})`);
+        const sql = buildDeleteByIdSql('materias');
         return await this.db.queryRowCount(sql, [id]);
     }
 }

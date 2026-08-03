@@ -1,4 +1,5 @@
 import Db from './db-pg.js';
+import { buildSelectAllSql, buildSelectByIdSql, buildInsertSql, buildUpdateSql, buildDeleteByIdSql } from './../helpers/sql-crud-helper.js';
 
 export default class AlumnosRepository {
     constructor() {
@@ -8,31 +9,25 @@ export default class AlumnosRepository {
 
     getAllAsync = async () => {
         console.log(`AlumnosRepository-new.getAllAsync()`);
-        const sql = `SELECT * FROM alumnos`;
+        const sql = buildSelectAllSql('alumnos');
         return await this.db.queryAll(sql);
     }
 
     getByIdAsync = async (id) => {
         console.log(`AlumnosRepository-new.getByIdAsync(${id})`);
-        const sql = `SELECT * FROM alumnos WHERE id=$1`;
+        const sql = buildSelectByIdSql('alumnos');
         return await this.db.queryOne(sql, [id]);
     }
 
     createAsync = async (entity) => {
         console.log(`AlumnosRepository-new.createAsync(${JSON.stringify(entity)})`);
-        const sql = ` INSERT INTO alumnos (
-                            nombre              ,
-                            apellido            ,
-                            id_curso            ,
-                            fecha_nacimiento    ,
-                            hace_deportes
-                        ) VALUES (
-                            $1,
-                            $2,
-                            $3,
-                            $4,
-                            $5
-                        ) RETURNING id`;
+        const sql = buildInsertSql('alumnos', [
+            'nombre',
+            'apellido',
+            'id_curso',
+            'fecha_nacimiento',
+            'hace_deportes'
+        ]);
         const values = [
             entity?.nombre           ?? '',
             entity?.apellido         ?? '',
@@ -50,13 +45,13 @@ export default class AlumnosRepository {
         const previousEntity = await this.getByIdAsync(id);
         if (previousEntity == null) return 0;
 
-        const sql = `UPDATE alumnos SET
-                        nombre              = $2,
-                        apellido            = $3,
-                        id_curso            = $4,
-                        fecha_nacimiento    = $5,
-                        hace_deportes       = $6
-                    WHERE id = $1`;
+        const sql = buildUpdateSql('alumnos', [
+            'nombre',
+            'apellido',
+            'id_curso',
+            'fecha_nacimiento',
+            'hace_deportes'
+        ]);
         const values = [
             id,
             entity?.nombre           ?? previousEntity?.nombre,
@@ -70,7 +65,7 @@ export default class AlumnosRepository {
 
     deleteByIdAsync = async (id) => {
         console.log(`AlumnosRepository-new.deleteByIdAsync(${id})`);
-        const sql = `DELETE FROM alumnos WHERE id=$1`;
+        const sql = buildDeleteByIdSql('alumnos');
         return await this.db.queryRowCount(sql, [id]);
     }
 }
