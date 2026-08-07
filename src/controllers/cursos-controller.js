@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import CursosService from './../services/cursos-service.js'
+import respuestasHelper from '../helpers/respuestas-helper.js';
 
 const router = Router();
 const currentService = new CursosService();
@@ -10,13 +11,12 @@ router.get('', async (req, res) => {
         console.log(`CursosController.get`);
         const returnArray = await currentService.getAllAsync();
         if (returnArray != null){
-            res.status(StatusCodes.OK).json(returnArray);
+            respuestasHelper.responderOk(res, returnArray);
         } else {
-            res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(`Error interno.`);
+            respuestasHelper.responderInternalError(res, `Error interno.`);
         }
     } catch (error) {
-        console.log(error);
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(`Error: ${error.message}`);
+        respuestasHelper.responderError(res, error);
     }
 });
 
@@ -25,13 +25,12 @@ router.get('/:id', async (req, res) => {
         let id = req.params.id;
         const returnEntity = await currentService.getByIdAsync(id);
         if (returnEntity != null){
-            res.status(StatusCodes.OK).json(returnEntity);
+            respuestasHelper.responderOk(res, returnEntity);
         } else {
-            res.status(StatusCodes.NOT_FOUND).send(`No se encontro la entidad (id:${id}).`);
+            respuestasHelper.responderNotFound(res, id);
         }
     } catch (error) {
-        console.log(error);
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(`Error: ${error.message}`);
+        respuestasHelper.responderError(res, error);
     }
 });
 
@@ -40,13 +39,12 @@ router.post('', async (req, res) => {
         let entity = req.body;
         const newId = await currentService.createAsync(entity);
         if (newId > 0 ){
-            res.status(StatusCodes.CREATED).json(newId);
+            respuestasHelper.responderCreated(res, newId);
         } else {
-            res.status(StatusCodes.BAD_REQUEST).json(null);
+            respuestasHelper.responderBadRequestJson(res, null);
         }
     } catch (error) {
-        console.log(error);
-        res.status(StatusCodes.BAD_REQUEST).send(`Error: ${error.message}`);
+        respuestasHelper.responderError(res, error, StatusCodes.BAD_REQUEST);
     }
 });
 
@@ -56,19 +54,18 @@ router.put('/:id', async (req, res) => {
         let entity = req.body;
 
         if (entity.id && parseInt(entity.id) !== id) {
-            return res.status(StatusCodes.BAD_REQUEST).send(`El id de la URL (${id}) no coincide con el id del body (${entity.id}).`);
+            return respuestasHelper.responderBadRequest(res, `El id de la URL (${id}) no coincide con el id del body (${entity.id}).`);
         }
 
         entity.id = id;
         const rowsAffected = await currentService.updateAsync(entity);
         if (rowsAffected != 0){
-            res.status(StatusCodes.OK).json(rowsAffected);
+            respuestasHelper.responderOk(res, rowsAffected);
         } else {
-            res.status(StatusCodes.NOT_FOUND).send(`No se encontro la entidad (id:${id}).`);
+            respuestasHelper.responderNotFound(res, id);
         }
     } catch (error) {
-        console.log(error);
-        res.status(StatusCodes.BAD_REQUEST).send(`Error: ${error.message}`);
+        respuestasHelper.responderError(res, error, StatusCodes.BAD_REQUEST);
     }
 });
 
@@ -77,13 +74,12 @@ router.delete('/:id', async (req, res) => {
         let id = req.params.id;
         const rowCount = await currentService.deleteByIdAsync(id);
         if (rowCount != 0){
-            res.status(StatusCodes.OK).json(null);
+            respuestasHelper.responderOk(res, null);
         } else {
-            res.status(StatusCodes.NOT_FOUND).send(`No se encontro la entidad (id:${id}).`);
+            respuestasHelper.responderNotFound(res, id);
         }
     } catch (error) {
-        console.log(error);
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(`Error: ${error.message}`);
+        respuestasHelper.responderError(res, error);
     }
 });
 
