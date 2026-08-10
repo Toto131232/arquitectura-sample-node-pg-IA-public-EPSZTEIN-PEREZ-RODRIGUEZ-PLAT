@@ -3,6 +3,7 @@ import CursosService from './../services/cursos-service.js'
 import respuestasHelper from '../helpers/respuestas-helper.js';
 // [IA]
 import { parsearId } from '../helpers/validaciones-helper.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
 
 const router = Router();
 const currentService = new CursosService();
@@ -36,7 +37,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('', async (req, res) => {
+router.post('', authMiddleware, async (req, res) => {
     try {
         let entity = req.body;
         const newId = await currentService.createAsync(entity);
@@ -50,7 +51,7 @@ router.post('', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', authMiddleware, async (req, res) => {
     try {
         // [IA]
         const id = parsearId(req.params.id);
@@ -75,7 +76,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
     try {
         // [IA]
         const id = parsearId(req.params.id);

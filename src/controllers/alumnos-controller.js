@@ -4,6 +4,7 @@ import Alumno from './../entities/alumno.js'
 import respuestasHelper from '../helpers/respuestas-helper.js';
 // [IA]
 import { parsearId } from '../helpers/validaciones-helper.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
 
 const router = Router();
 const currentService = new AlumnosService();
@@ -12,7 +13,7 @@ const currentService = new AlumnosService();
 // En vez de recibir los datos del body (req.body), los armamos nosotros desde código.
 // Para eso usamos la clase Alumno de la carpeta entities.
 // Probar con: GET http://localhost:3000/api/alumnos/test-insert
-router.get('/test-insert', async (req, res) => {
+router.get('/test-insert', authMiddleware, async (req, res) => {
     console.log('/test-insert');
     try {
         const nuevoAlumno = new Alumno('Willy', 'Wonka', 1, '2005-07-15', true);
@@ -63,7 +64,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('', async (req, res) => {
+router.post('', authMiddleware, async (req, res) => {
     try {
         let entity = req.body;
         const newId = await currentService.createAsync(entity);
@@ -77,7 +78,7 @@ router.post('', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', authMiddleware, async (req, res) => {
     try {
         // [IA]
         const id = parsearId(req.params.id);
@@ -102,7 +103,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
     try {
         // [IA]
         const id = parsearId(req.params.id);

@@ -1,0 +1,230 @@
+2026-08-10T01:12:13.065Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:14.728Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:16.362Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:18.007Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:19.649Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:21.304Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:23.082Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:24.716Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:26.495Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:28.132Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:29.965Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:31.776Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:33.556Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:35.184Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:36.825Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:38.612Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:40.240Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:42.089Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:43.726Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:45.366Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:12:51.587Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+
+2026-08-10T01:13:05.974Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryRowCount (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:77:19)
+    at async AlumnosRepository.deleteByIdAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:71:16)
+    at async AlumnosService.deleteByIdAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:73:30)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:110:26
+
+2026-08-10T01:13:07.113Z: error - (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+Stack Trace:
+error: (ENOTFOUND) tenant/user postgres.eozcrunsuompyeapymze not found
+    at C:\Users\machi\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DbPg.queryAll (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:42:19)
+    at async AlumnosRepository.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/alumnos-repository.js:13:16)
+    at async AlumnosService.getAllAsync (file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/services/alumnos-service.js:24:29)
+    at async file:///C:/Users/machi/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/controllers/alumnos-controller.js:41:29
+

@@ -1,2 +1,5 @@
 # Node.js
 node_modules/
+
+# [IA] Secretos y configuración local — no commitear
+.env

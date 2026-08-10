@@ -23,4 +23,9 @@ export default class AppError extends Error {
     static internal(message = 'Error interno del servidor.') {
         return new AppError(StatusCodes.INTERNAL_SERVER_ERROR, message);
     }
+
+    // [IA]
+    static unauthorized(message = 'No autorizado.') {
+        return new AppError(StatusCodes.UNAUTHORIZED, message);
+    }
 }
