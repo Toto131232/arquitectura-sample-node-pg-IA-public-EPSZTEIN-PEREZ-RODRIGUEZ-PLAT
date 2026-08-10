@@ -1,15 +1,15 @@
-import { Router } from 'express';
-import CursosService from './../services/cursos-service.js'
-import respuestasHelper from '../helpers/respuestas-helper.js';
 // [IA]
+import { Router } from 'express';
+import CalificacionesService from './../services/calificaciones-service.js'
+import respuestasHelper from '../helpers/respuestas-helper.js';
 import { parsearId } from '../helpers/validaciones-helper.js';
 
 const router = Router();
-const currentService = new CursosService();
+const currentService = new CalificacionesService();
 
 router.get('', async (req, res) => {
     try {
-        console.log(`CursosController.get`);
+        console.log(`CalificacionesController.get`);
         const returnArray = await currentService.getAllAsync();
         if (returnArray != null){
             respuestasHelper.responderOk(res, returnArray);
@@ -23,7 +23,6 @@ router.get('', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        // [IA]
         const id = parsearId(req.params.id);
         const returnEntity = await currentService.getByIdAsync(id);
         if (returnEntity != null){
@@ -52,7 +51,6 @@ router.post('', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
-        // [IA]
         const id = parsearId(req.params.id);
         let entity = req.body;
 
@@ -77,7 +75,6 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        // [IA]
         const id = parsearId(req.params.id);
         const rowCount = await currentService.deleteByIdAsync(id);
         if (rowCount != 0){

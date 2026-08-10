@@ -22,16 +22,19 @@ export default class CursosRepository {
     createAsync = async (entity) => {
         console.log(`CursosRepository.createAsync(${JSON.stringify(entity)})`);
         const sql = buildInsertSql('cursos', ['nombre']);
-        const values = [entity?.nombre ?? ''];
+        // [IA]
+        const values = [entity.nombre];
         return await this.db.queryReturnId(sql, values);
     }
 
     updateAsync = async (entity) => {
         console.log(`CursosRepository.updateAsync(${JSON.stringify(entity)})`);
+        const previousEntity = await this.getByIdAsync(entity.id);
+        if (previousEntity == null) return 0;
+
         const sql = buildUpdateSql('cursos', ['nombre']);
-        const values =  [   entity.id,
-                            entity?.nombre ?? ''
-                        ];
+        // [IA]
+        const values = [entity.id, entity.nombre];
         return await this.db.queryRowCount(sql, values);
     }
 

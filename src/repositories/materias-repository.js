@@ -22,16 +22,19 @@ export default class MateriasRepository {
     createAsync = async (entity) => {
         console.log(`MateriasRepository.createAsync(${JSON.stringify(entity)})`);
         const sql = buildInsertSql('materias', ['nombre']);
-        const values = [entity?.nombre ?? ''];
+        // [IA]
+        const values = [entity.nombre];
         return await this.db.queryReturnId(sql, values);
     }
 
     updateAsync = async (entity) => {
         console.log(`MateriasRepository.updateAsync(${JSON.stringify(entity)})`);
+        const previousEntity = await this.getByIdAsync(entity.id);
+        if (previousEntity == null) return 0;
+
         const sql = buildUpdateSql('materias', ['nombre']);
-        const values =  [   entity.id,
-                            entity?.nombre ?? ''
-                        ];
+        // [IA]
+        const values = [entity.id, entity.nombre];
         return await this.db.queryRowCount(sql, values);
     }
 

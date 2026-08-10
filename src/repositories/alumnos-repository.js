@@ -28,12 +28,13 @@ export default class AlumnosRepository {
             'fecha_nacimiento',
             'hace_deportes'
         ]);
+        // [IA] Sin defaults silenciosos: el service ya validó los datos
         const values = [
-            entity?.nombre           ?? '',
-            entity?.apellido         ?? '',
-            entity?.id_curso         ?? 0,
-            entity?.fecha_nacimiento ?? null,
-            entity?.hace_deportes    ?? 0
+            entity.nombre,
+            entity.apellido,
+            entity.id_curso,
+            entity.fecha_nacimiento,
+            entity.hace_deportes
         ];
         return await this.db.queryReturnId(sql, values);
     }
@@ -52,13 +53,14 @@ export default class AlumnosRepository {
             'fecha_nacimiento',
             'hace_deportes'
         ]);
+        // [IA] Recibe entidad ya mergeada y validada desde el service
         const values = [
             id,
-            entity?.nombre           ?? previousEntity?.nombre,
-            entity?.apellido         ?? previousEntity?.apellido,
-            entity?.id_curso         ?? previousEntity?.id_curso,
-            entity?.fecha_nacimiento ?? previousEntity?.fecha_nacimiento,
-            entity?.hace_deportes    ?? previousEntity?.hace_deportes
+            entity.nombre,
+            entity.apellido,
+            entity.id_curso,
+            entity.fecha_nacimiento,
+            entity.hace_deportes
         ];
         return await this.db.queryRowCount(sql, values);
     }

@@ -1,4 +1,6 @@
 import CursosRepository from '../repositories/cursos-repository.js';
+// [IA]
+import { validarBodyObjeto, validarTextoObligatorio } from '../helpers/validaciones-helper.js';
 
 export default class CursosService {
     constructor() {
@@ -20,13 +22,25 @@ export default class CursosService {
 
     createAsync = async (entity) => {
         console.log(`CursosService.createAsync(${JSON.stringify(entity)})`);
-        const rowsAffected = await this.CursosRepository.createAsync(entity);
+        // [IA]
+        const validado = this.validarInputCursoCreate(entity);
+        const rowsAffected = await this.CursosRepository.createAsync(validado);
         return rowsAffected;
     }
 
     updateAsync = async (entity) => {
         console.log(`CursosService.updateAsync(${JSON.stringify(entity)})`);
-        const rowsAffected = await this.CursosRepository.updateAsync(entity);
+        const previousEntity = await this.CursosRepository.getByIdAsync(entity.id);
+        if (previousEntity == null) return 0;
+
+        // [IA]
+        const camposValidados = this.validarInputCursoUpdate(entity);
+        const merged = {
+            id     : entity.id,
+            nombre : camposValidados.nombre ?? previousEntity.nombre
+        };
+
+        const rowsAffected = await this.CursosRepository.updateAsync(merged);
         return rowsAffected;
     }
     
@@ -35,5 +49,22 @@ export default class CursosService {
         const rowsAffected = await this.CursosRepository.deleteByIdAsync(id);
         return rowsAffected;
     }
-}
 
+    // [IA]
+    validarInputCursoCreate = (entity) => {
+        validarBodyObjeto(entity);
+        return {
+            nombre : validarTextoObligatorio('nombre', entity.nombre)
+        };
+    }
+
+    // [IA]
+    validarInputCursoUpdate = (entity) => {
+        validarBodyObjeto(entity);
+        const result = {};
+        if (entity.nombre !== undefined) {
+            result.nombre = validarTextoObligatorio('nombre', entity.nombre);
+        }
+        return result;
+    }
+}

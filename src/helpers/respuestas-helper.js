@@ -1,4 +1,6 @@
+// [IA]
 import { StatusCodes } from 'http-status-codes';
+import AppError from './app-error.js';
 
 class RespuestasHelper {
     responderOk = (res, data) => {
@@ -10,7 +12,7 @@ class RespuestasHelper {
     }
 
     responderBadRequest = (res, mensaje) => {
-        return res.status(StatusCodes.BAD_REQUEST).send(mensaje);
+        return res.status(StatusCodes.BAD_REQUEST).json({ message: mensaje });
     }
 
     responderBadRequestJson = (res, data) => {
@@ -26,12 +28,14 @@ class RespuestasHelper {
     }
 
     /**
-     * Loguea el error en consola y responde con el mensaje `Error: <mensaje>`.
-     * @param {*} status StatusCode a utilizar (por defecto INTERNAL_SERVER_ERROR).
+     * Loguea el error en consola y responde con un mensaje seguro para el cliente.
      */
-    responderError = (res, error, status = StatusCodes.INTERNAL_SERVER_ERROR) => {
+    responderError = (res, error) => {
         console.log(error);
-        res.status(status).send(`Error: ${error.message}`);
+        if (error instanceof AppError) {
+            return res.status(error.statusCode).json({ message: error.message });
+        }
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: 'Error interno del servidor.' });
     }
 }
 

@@ -1,6 +1,8 @@
 import pkg from 'pg'
 import config from './../configs/db-config.js';
 import LogHelper from './../helpers/log-helper.js'
+// [IA]
+import AppError from './../helpers/app-error.js';
 
 const { Pool } = pkg;
 
@@ -16,57 +18,67 @@ export default class DbPg {
         return this.DBPool;
     }
 
+    // [IA]
+    mapPgError = (error) => {
+        LogHelper.logError(error);
+
+        if (error.code === '23505') {
+            throw AppError.conflict('El registro ya existe.');
+        }
+        if (error.code === '23503') {
+            throw AppError.conflict('No se puede realizar la operación porque existen registros relacionados.');
+        }
+        if (error.code === '22P02') {
+            throw AppError.badRequest('Formato de dato inválido.');
+        }
+
+        throw AppError.internal();
+    }
+
     queryAll = async (sql, values = null) => {
-        let returnArray = null;
         try {
             const resultPg = values
                 ? await this.getDBPool().query(sql, values)
                 : await this.getDBPool().query(sql);
-            returnArray = resultPg.rows;
+            return resultPg.rows;
         } catch (error) {
-            LogHelper.logError(error);
+            this.mapPgError(error);
         }
-        return returnArray;
     }
 
     queryOne = async (sql, values = null) => {
-        let returnEntity = null;
         try {
             const resultPg = values
                 ? await this.getDBPool().query(sql, values)
                 : await this.getDBPool().query(sql);
             if (resultPg.rows.length > 0) {
-                returnEntity = resultPg.rows[0];
+                return resultPg.rows[0];
             }
+            return null;
         } catch (error) {
-            LogHelper.logError(error);
+            this.mapPgError(error);
         }
-        return returnEntity;
     }
 
     queryReturnId = async (sql, values = null) => {
-        let newId = 0;
         try {
             const resultPg = values
                 ? await this.getDBPool().query(sql, values)
                 : await this.getDBPool().query(sql);
-            newId = resultPg.rows[0].id;
+            return resultPg.rows[0].id;
         } catch (error) {
-            LogHelper.logError(error);
+            this.mapPgError(error);
         }
-        return newId;
     }
 
     queryRowCount = async (sql, values = null) => {
-        let rowsAffected = 0;
         try {
             const resultPg = values
                 ? await this.getDBPool().query(sql, values)
                 : await this.getDBPool().query(sql);
-            rowsAffected = resultPg.rowCount;
+            return resultPg.rowCount;
         } catch (error) {
-            LogHelper.logError(error);
+            this.mapPgError(error);
         }
-        return rowsAffected;
     }
 }
