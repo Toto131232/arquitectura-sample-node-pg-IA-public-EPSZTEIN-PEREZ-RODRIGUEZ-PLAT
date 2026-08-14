@@ -1,0 +1,8 @@
+2026-08-14T11:52:31.241Z: error - no existe la base de datos �DAI�
+Stack Trace:
+error: no existe la base de datos �DAI�
+    at C:\Users\devandroid\arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DbPg.queryOne (file:///C:/Users/devandroid/arquitectura-sample-node-pg-IA-public-EPSZTEIN-PEREZ-RODRIGUEZ-PLAT/src/repositories/db-pg.js:52:19)
+    at async [eval]:7:15
+
